@@ -1,0 +1,90 @@
+2026-05-21 00:55:58.833 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/tasks
+2026-05-21 00:55:58.833 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/tasks
+2026-05-21 00:55:59.484 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/tasks
+2026-05-21 00:55:59.596 [http-nio-8080-exec-8] DEBUG c.t.s.CustomUserDetailsService - Loading user by email: katkhedepawanc@gmail.com
+2026-05-21 00:55:59.834 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-21 00:56:00.133 [http-nio-8080-exec-8] DEBUG c.t.s.CustomUserDetailsService - User found: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.150 [http-nio-8080-exec-8] DEBUG c.t.config.JwtAuthenticationFilter - User authenticated successfully: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.164 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/tasks
+2026-05-21 00:56:00.200 [http-nio-8080-exec-8] DEBUG c.t.controller.TaskController - Get all tasks request for user: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.201 [http-nio-8080-exec-8] DEBUG com.taskmanager.service.TaskService - Fetching all tasks for user: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.204 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-21 00:56:00.218 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.due_date,
+        t1_0.priority,
+        t1_0.status,
+        t1_0.title,
+        t1_0.updated_at,
+        t1_0.user_id 
+    from
+        tasks t1_0 
+    where
+        t1_0.user_id=? 
+    order by
+        t1_0.created_at desc
+2026-05-21 00:56:00.328 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/tasks
+2026-05-21 00:56:00.336 [http-nio-8080-exec-7] DEBUG c.t.s.CustomUserDetailsService - Loading user by email: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.342 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-21 00:56:00.347 [http-nio-8080-exec-7] DEBUG c.t.s.CustomUserDetailsService - User found: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.357 [http-nio-8080-exec-7] DEBUG c.t.config.JwtAuthenticationFilter - User authenticated successfully: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.358 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/tasks
+2026-05-21 00:56:00.359 [http-nio-8080-exec-7] DEBUG c.t.controller.TaskController - Get all tasks request for user: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.359 [http-nio-8080-exec-7] DEBUG com.taskmanager.service.TaskService - Fetching all tasks for user: katkhedepawanc@gmail.com
+2026-05-21 00:56:00.363 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-21 00:56:00.375 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.due_date,
+        t1_0.priority,
+        t1_0.status,
+        t1_0.title,
+        t1_0.updated_at,
+        t1_0.user_id 
+    from
+        tasks t1_0 
+    where
+        t1_0.user_id=? 
+    order by
+        t1_0.created_at desc
